@@ -29,7 +29,7 @@ class QuestionAdmin(admin.ModelAdmin):
     list_display = ['content']
 
 class ChoiceAdmin(admin.ModelAdmin):
-    list_display = ('content', 'correct')
+    list_display = ('content', 'is_correct')
 
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Lesson, LessonAdmin)

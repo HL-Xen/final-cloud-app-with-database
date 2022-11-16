@@ -107,7 +107,7 @@ class Question(models.Model):
     # question text
     content = models.TextField()
     # question grade/mark
-    grade = models.FloatField()
+    grade = models.IntegerField()
 
     # <HINT> A sample model method to calculate if learner get the score of the question
     def is_get_score(self, selected_ids):
@@ -127,7 +127,7 @@ class Question(models.Model):
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     content = models.TextField()
-    correct = models.BooleanField()
+    is_correct = models.BooleanField()
 
 # <HINT> The submission model
 # One enrollment could have multiple submission
